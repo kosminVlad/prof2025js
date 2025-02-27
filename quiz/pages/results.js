@@ -2,18 +2,22 @@ const usernameP = document.getElementById('username')
 const rightWrong = document.getElementById('right-wrong')
 const answersForm = document.getElementById('answers')
 const restartBtn = document.getElementById('restart')
+const solvedQues = document.getElementById('solved-ques-no')
 
 let questionsStr = localStorage.getItem('questions')
 let userAnswersStr = localStorage.getItem('userAnswers')
 const score = localStorage.getItem('score')
 const username = localStorage.getItem('username')
+const questionsArr = JSON.parse(questionsStr)
+const userAnswersArr = JSON.parse(userAnswersStr)
 
 
 usernameP.textContent = username
+solvedQues.textContent = `Вы прошли ${questionsArr.length} вопросов на тему космоса`
 rightWrong.textContent = `${score} вы решили верно и ${5 - score} неверно`
 
-    const questionsArr = JSON.parse(questionsStr)
-    const userAnswersArr = JSON.parse(userAnswersStr)
+
+
     const answersHTML = questionsArr.map((question, index) => 
         `
         <div class="answer">
