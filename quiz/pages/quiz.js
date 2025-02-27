@@ -97,6 +97,7 @@ submitAnswerBtn.addEventListener('click', ()=> {
 
     if (currentIndex == questions.length - 1) {
         resultsBtn.classList.remove('hidden')
+        submitAnswerBtn.classList.add('hidden')
         userAnswers.forEach((answer, index) => {
             console.log(answer.value, questions[index].correctAnswer);
             if (answer.value === questions[index].correctAnswer) {
