@@ -1,0 +1,255 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+#wrapper{
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8)), url("images/vr.webp");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    text-align: center;
+}
+
+#form-box{
+    padding:1%;
+    top:50%;
+    position: absolute;
+    left:40%;
+}
+
+.username-input {
+    color: black;
+    background-color:#fff;
+    border: 2px solid #FF9933;
+    padding: 15px;
+    border-radius: 20px;
+    font-family: monospace;
+}
+
+.start-button{
+    text-decoration: none;
+    color: black;
+    background-color:#fff;
+    margin-left: 20px;
+    border: 2px solid #FF9933;
+    padding: 15px;
+    border-radius: 20px;
+    font-family: monospace;
+}
+
+.start-button:disabled {
+    cursor: not-allowed;
+    color: grey;
+}
+
+.start-button:hover:not(:disabled){
+    background-color: #FF9933;
+    color:#fff;
+    cursor: pointer;
+}
+
+.quiz{
+    background-color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    height: 100vh;
+    width: 70%;
+    margin: 0 auto;
+}
+
+#info{
+    height:25px;
+    background-color: #fff;
+}
+
+#score{
+    width:50%;
+    float:left;
+    font-size: 25px;
+
+}
+
+#ques-left{
+    width:50%;
+    float:left;
+    font-size:25px;
+
+}
+
+#ques-view{
+    height: 35px;
+    margin-top: 10px;
+    padding: 2px;
+}
+.ques-circle{
+    float: left;
+    border-radius: 50%;
+    width: 35px;
+    height: 90%;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.correct{
+    background-color: #2ecc71;
+    color: #fff;
+}
+.incorrect{
+    background-color: #fc5c65;
+    color: #fff;
+}
+
+.question{
+    font-family: 'Roboto Slab', sans-serif;
+    letter-spacing: .13em;
+}
+
+.choice{
+    background-color: #fff;
+    padding: 2%;
+}
+
+.options{
+    display:block;
+    margin-left: 13%;
+    font-size: 25px;
+    font-weight: 100;
+    margin-top: 30px;
+    text-align: left;
+}
+
+ input[type=radio] {
+     border: 5px solid white;
+     width: 20px;
+     height: 1.3em;
+     float: left;
+}
+
+.ans-btn{
+    background-color: #fff;
+    padding: 2%;
+}
+
+.submit-answer{
+    background-color:white;
+    border: 2px solid #FF9933;
+    padding: 15px;
+    border-radius: 20px;
+    font-family: monospace;
+    transition: background-color 0.3s,border 0.2s, color 0.2s;
+}
+
+.submit-answer:disabled {
+    color: grey;
+    cursor: not-allowed;
+}
+
+.submit-answer:hover:not(:disabled){
+    background-color: #FF9933;
+    padding: 16px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.view-results{
+    text-decoration: none;
+    color: black;
+    background-color:white;
+    border: 2px solid #FF9933;
+    padding: 15px;
+    border-radius: 20px;
+    font-family: monospace;
+    transition: background-color 0.3s,border 0.2s, color 0.2s;
+}
+
+.view-results:hover{
+    background-color: #FF9933;
+    padding: 16px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+/*Final Results*/
+
+.final-result{
+    background-color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.5em;
+    height: 100vh;
+}
+.solved-ques-no{
+    padding: 10px;
+}
+
+.right-wrong{
+    padding: 10px;
+}
+
+#display-final-score{
+    padding: 5%;
+}
+.remark{
+    padding: 5%
+}
+#restart{
+    background-color:#ff9933;
+    margin-left: 30px;
+    border: 2px solid #FF9933;
+    padding: 15px;
+    border-radius: 20px;
+    font-size: 80%;
+    transition: background-color 0.3s,border 0.2s, color 0.2s;
+}
+
+#restart:hover{
+    background-color: #FF9933;
+    color:#fff;
+    cursor: pointer;
+    font-size: 90%;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+@media only screen and (max-width: 1250px) {
+    .options{
+        margin-left: 8%
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .options{
+        margin-left: 4%;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .options{
+        display: block;
+        margin-top: 3%;
+
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .options{
+        margin-top: 3%;
+
+    }
+    
+    .choose-lang{
+        display: block;
+        margin-top: 25px;
+        margin-left: 0px;
+    }
+    
+    #language{
+        display: block;
+    }
+}
